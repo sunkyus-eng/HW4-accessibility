@@ -1,0 +1,106 @@
+html,
+body {
+  font-family: arial;
+  font-size: 1.1em;
+}
+
+.container {
+  margin: auto;
+  width: 800px;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 2em;
+  margin: 1em 0;
+}
+
+.heading2 {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: .5em 0;
+}
+
+input,
+textarea,
+button {
+  font-size: 1.1em;
+}
+
+
+/* Improved link contrast */
+a {
+  color: #005ea8;
+  text-decoration: underline;
+}
+
+
+/* Hidden text */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+
+/* Navigation links */
+.navigation a {
+  display: inline-block;
+  padding: 6px;
+  margin: 2px;
+}
+
+
+/* Strong visible focus for navigation */
+.navigation a:focus,
+.navigation a:focus-visible {
+  outline: 4px solid black;
+  outline-offset: 3px;
+  background-color: yellow;
+}
+
+
+/* Visible focus for interactive elements */
+a:focus,
+a:focus-visible,
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible,
+button:focus,
+button:focus-visible,
+iframe:focus,
+iframe:focus-visible,
+[tabindex]:focus,
+[tabindex]:focus-visible {
+  outline: 4px solid black;
+  outline-offset: 3px;
+}
+
+
+/* Error color */
+.error {
+  color: #b00020;
+}
+
+
+/* Written error messages */
+.error-message {
+  color: #b00020;
+  font-weight: bold;
+}
+
+
+/* Invalid fields have a visible border too */
+.field-error {
+  border: 2px solid #b00020;
+}
+
+
+#accessibilitybanner {
+  width: 857px;
+  height: 207px;
+  background-image: url(pics/accessibilityoverviewbanner.png);
+}

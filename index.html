@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Accessibility Course Overview</title>
+
+  <link rel="stylesheet" href="homework3.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="homework3.js"></script>
+</head>
+
+<body>
+
+<div class="offscreen">Main Content</div>
+
+<div class="container">
+
+  <nav class="navigation" aria-label="Main navigation">
+
+    <a href="#home">
+      <img src="pics/home.png" alt="Home">
+    </a>
+
+    <a href="#links">
+      <img src="pics/links.png" alt="Links">
+    </a>
+
+    <a href="#signup">
+      <img src="pics/signup.png" alt="Sign Up">
+    </a>
+
+  </nav>
+
+
+  <main id="home">
+
+    <h1>Accessibility Course Overview</h1>
+
+    <div id="accessibilitybanner"></div>
+
+
+    <!-- Captioned YouTube video -->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/ADu4Q5mFsuM?cc_load_policy=1&amp;cc_lang_pref=en"
+      title="Employment for disabled and non-disabled Americans"
+      style="border: 0;"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+
+
+    <!-- Audio-described version -->
+    <p>
+      <a
+        href="https://youdescribe.org/video/ADu4Q5mFsuM?ad=6ab1dce1329e3caca7709ab3"
+        target="_blank"
+        rel="noopener noreferrer">
+        Listen to the audio-described version of the employment video
+      </a>
+    </p>
+
+
+    <h2 id="links" class="heading2">Links</h2>
+
+    <img src="pics/dot.png" alt="">
+    &nbsp;
+    <a href="http://accessibility.cs.cmu.edu">
+      Accessibility Research at CMU
+    </a>
+
+    <br>
+
+    <img src="pics/dot.png" alt="">
+    &nbsp;
+    <a href="https://www.cmu.edu/hr/eos/disability/">
+      Disability Services at CMU
+    </a>
+
+    <br>
+
+    <img src="pics/dot.png" alt="">
+    &nbsp;
+    <a href="https://hamster.dance/hamsterdance/">
+      Hampster Dance
+    </a>
+
+    <br>
+
+
+    <h2 id="signup" class="heading2">Sign Up!</h2>
+
+
+    <form id="sign-up-form">
+
+      <p>
+        <span id="name">Name:</span>
+
+        <label for="fn">First Name:</label>
+        <input
+          name="fn"
+          type="text"
+          size="10"
+          id="fn"
+          aria-describedby="name-error">
+
+        <label for="mi">Middle Initial:</label>
+        <input
+          name="mi"
+          type="text"
+          size="1"
+          id="mi"
+          aria-describedby="name-error">
+
+        <label for="ln">Last Name:</label>
+        <input
+          name="ln"
+          type="text"
+          size="10"
+          id="ln"
+          aria-describedby="name-error">
+      </p>
+
+
+      <!-- Written name error -->
+      <p
+        id="name-error"
+        class="error-message"
+        role="alert"
+        hidden>
+        Error: Please enter your first name, middle initial, and last name.
+      </p>
+
+
+      <p>
+        <label for="em" id="email">
+          Email:
+        </label>
+
+        <input
+          id="em"
+          name="em"
+          type="email"
+          size="20"
+          aria-describedby="email-error">
+      </p>
+
+
+      <!-- Written email error -->
+      <p
+        id="email-error"
+        class="error-message"
+        role="alert"
+        hidden>
+        Error: Please enter your email address.
+      </p>
+
+
+      <p>
+        <input
+          type="checkbox"
+          id="receiveemails"
+          name="spamyn"
+          value="y">
+
+        <label for="receiveemails">
+          Would you like to receive occasional emails with offers from us?
+        </label>
+      </p>
+
+
+      <p>
+        <label for="comments">
+          Comments:
+        </label>
+
+        <br>
+
+        <textarea
+          id="comments"
+          name="comments"
+          rows="5"
+          cols="40"></textarea>
+      </p>
+
+
+      <button
+        type="button"
+        id="signupbutton">
+        Sign Up!
+      </button>
+
+    </form>
+
+  </main>
+
+</div>
+
+</body>
+</html>
